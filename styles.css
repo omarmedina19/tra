@@ -1,0 +1,99 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Caja de Registro */
+.register-box {
+    background: rgba(236, 6, 25, 0.473);
+    padding: 40px;
+    border-radius: 10px;
+    width: 380px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.register-box h1 {
+    color: #0004ffa2;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.register-box p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ff9900;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0a1fd8;
+}
+
+/* Bot�n Registrarse */
+.btn {
+    background-color: #ff9900;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc7700;
+}
+
+/* Bot�n Facebook */
+.btn-facebook {
+    background-color: #1877f2;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-facebook:hover {
+    background-color: #125ac4;
+}
+
+/* Enlaces */
+a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

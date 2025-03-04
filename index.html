@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Pintura y Tapicería</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .presentacion, .registro, .servicios, .productos {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #ff9900;
+        }
+        p {
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #ff9900;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #cc7700;
+        }
+        .servicio img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo Taller">
+        <h1>CARCAMPING</h1>
+        <p>Calidad y Garantía en cada servicio.</p>
+    </header>
+    
+    <section class="presentacion">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un taller especializado en pintura y tapicería automotriz, ofreciendo calidad y garantía en cada trabajo. Nuestro objetivo es transformar y embellecer tu vehículo con los mejores materiales y técnicas del mercado.</p>
+        <p>Contamos con expertos en restauración y personalización de interiores de autos, así como en pintura de alta gama con acabados profesionales tenemos concecionarias a nivel nacional</p>
+    </section>
+    
+    <section class="registro">
+        <h2>Regístrate y Obtén un 10% de Descuento</h2>
+        <p>Accede a promociones exclusivas y mantente al día con nuestras ofertas.</p>
+        <a href="register.html" class="btn">Registrarse con Facebook</a>
+    </section>
+    
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicio">
+            <img src="img/pintura.jpg" alt="Pintura Automotriz">
+            <h2>Pintura Completa</h2>
+            <p>$600 - Garantía de 5 años</p>
+        </div>
+        <div class="servicio">
+            <img src="img/tapiceria.jpg" alt="Tapicería Automotriz">
+            <h2>Tapizado Interior</h2>
+            <p>$300 - Acabados de lujo</p>
+        </div>
+        <div class="servicio">
+            <img src="img/descuento.jpg" alt="Descuento Especial">
+            <h2>Combo Especial</h2>
+            <p>Pintura + Tapicería con descuento especial</p>
+        </div>
+    </section>
+    
+    <section class="productos">
+        <h2>Explora Nuestros Productos</h2>
+        <p>Descubre todos los productos y servicios que ofrecemos.</p>
+        <a href="products.html" class="btn">Ver Productos</a>
+    </section>
+    
+    <footer>
+        <a href="contact.html">Contáctanos</a>
+    </footer>
+</body>
+</html>

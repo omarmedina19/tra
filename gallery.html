@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Taller de Pintura y Tapicería</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background: url('img/background.jpg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <img src="img/logo.png" alt="Logo Taller">
+        <h1>Únete a Nuestra Comunidad</h1>
+        <p>Regístrate y obtén un <strong>10% de descuento</strong> en tu primer servicio.</p>
+    </header>
+
+    <section class="contenedor">
+        <div class="formulario">
+            <h2>Crear una Cuenta</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Nombre Completo" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+            
+            <p>O inicia sesión con:</p>
+            <button id="facebookLogin" class="btn-facebook" onclick="openFacebookLogin()">Iniciar sesión con Facebook</button>
+            
+            <p>¿Ya tienes una cuenta? <a href="products.html">Ver productos</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <a href="contact.html">Contáctanos</a>
+    </footer>
+
+    <script>
+        function openFacebookLogin() {
+            window.open('https://www.facebook.com/login/', '_blank', 'width=500,height=600');
+            setTimeout(() => {
+                localStorage.setItem("userLogged", "true");
+                window.location.href = 'gallery/gallery.html';
+            }, 2000);
+        }
+
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("¡Registro exitoso! Redirigiendo a la galería...");
+            localStorage.setItem("userLogged", "true");
+            window.location.href = 'gallery/gallery.html';
+        });
+    </script>
+</body>
+</html>

